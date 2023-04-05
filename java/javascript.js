@@ -39,3 +39,32 @@ function changeBGgreen(event){
 }
 
 buttoncontainer.addEventListener('click',changeBGgreen)
+
+function changeTextColor(event){
+    if(event.target.tagName === 'BUTTON'){
+    event.target.style.color = event.target.textContent
+    
+    console.log(event.target.textContent)
+    }
+}
+
+buttoncontainer.addEventListener('click', changeTextColor);
+
+//find the element
+
+//create function
+function newButton(){
+    let purple = document.createElement('button');
+    let purpP = document.createElement('p');
+
+    purple.addEventListener('click', changeBGgreen)
+    //append the stuff
+    document.body.appendChild(purpP);
+    document.body.appendChild(purple);
+    //cahnge the content
+    purple.textContent = 'purple';
+    purpP.textContent = 'somthing';
+}
+    //create new button wiht content pruple
+
+button.addEventListener('click', newButton)
